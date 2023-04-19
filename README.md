@@ -3,7 +3,13 @@
 This is a test suite that uses Jest and Puppeteer to perform automated tests on web pages. The test suite is intended for evaluating page performance using the Lighthouse audit, and the Navigation Timing API.
 The configuration file jest.config.js specifies the environment to run tests, the test match pattern, and global variables that affect how tests are run.
 
-The environment is defined in the env.js file and extends jest-environment-node. This environment sets up the browser using Puppeteer, defines a method for running tests on desktop, and handles sending test results to InfluxDB.
+The environment is defined in the env.js file and extends jest-environment-node. This environment sets up the browser using Puppeteer, defines a method for running tests on desktop, and handles sending test results to InfluxDB
+
+## How to install
+1) You'll need to have node and npm installed on your machine.
+2) Clone the repository
+3) Install development dependencies by running the following command: npm install --save-dev puppeteer jest lighthouse expect-puppeteer @influxdata/influxdb-client
+
 
 ## Running tests
 To run the test suite, simply run **`npx jest`** in the terminal. This will run the Jest test runner and execute all tests that match the pattern specified in jest.config.js.
